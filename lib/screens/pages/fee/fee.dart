@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/screens/pages/fee/installment.dart';
+import 'package:myapp/screens/pages/fee/installment_tab.dart';
 
 class Fee extends StatefulWidget {
   const Fee({Key? key}) : super(key: key);

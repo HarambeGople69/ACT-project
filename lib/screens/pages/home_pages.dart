@@ -96,6 +96,7 @@ class _HomePageState extends State<HomePage> {
                                     "Utsav Shrestha",
                                     style: BoldinfoStyle,
                                   ),
+                                  OurSizedHeight(),
                                 ],
                               ),
                               Spacer(),
@@ -106,7 +107,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   Positioned(
-                    top: ScreenUtil().setSp(105),
+                    top: ScreenUtil().setSp(115),
                     left: ScreenUtil().setSp(10),
                     right: ScreenUtil().setSp(10),
                     child: Container(
@@ -292,13 +293,13 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             // Text("data"),
-            // SizedBox(
-            //   height: ScreenUtil().setSp(200),
-            // ),
+            SizedBox(
+              height: ScreenUtil().setSp(10),
+            ),
             Container(
               margin: EdgeInsets.symmetric(
                   horizontal: ScreenUtil().setSp(10),
-                  vertical: ScreenUtil().setSp(15)),
+                  vertical: ScreenUtil().setSp(10)),
               // padding: EdgeInsets.symmetric(
               //   horizontal: ScreenUtil().setSp(5),
               //   vertical: ScreenUtil().setSp(5),
