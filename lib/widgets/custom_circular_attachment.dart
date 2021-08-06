@@ -7,18 +7,23 @@ class CustomAttachment extends StatefulWidget {
   final String title;
   final String circularFor;
   final String circularAdded;
-  const CustomAttachment(
-      {Key? key,
-      required this.title,
-      required this.circularFor,
-      required this.circularAdded})
-      : super(key: key);
+  final String path;
+  const CustomAttachment({
+    Key? key,
+    required this.title,
+    required this.circularFor,
+    required this.circularAdded,
+    required this.path,
+  }) : super(key: key);
 
   @override
   _CustomAttachmentState createState() => _CustomAttachmentState();
 }
 
 class _CustomAttachmentState extends State<CustomAttachment> {
+  
+ 
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -62,7 +67,7 @@ class _CustomAttachmentState extends State<CustomAttachment> {
               IconButton(
                 onPressed: () {
                   Navigator.push(context, MaterialPageRoute(builder: (context) {
-                    return PdfView(path: "images/pdf1.pdf");
+                    return PdfView(path: widget.path);
                   }));
                 },
                 icon: Icon(

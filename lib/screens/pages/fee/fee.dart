@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:myapp/screens/pages/fee/installment_tab.dart';
+import 'package:myapp/utils/styles.dart';
 
 class Fee extends StatefulWidget {
   const Fee({Key? key}) : super(key: key);
@@ -24,12 +26,18 @@ class _FeeState extends State<Fee> {
         appBar: AppBar(
           title: Column(
             children: [
-              Text("Fees"),
-              Text("Select the fee to pay"),
+              Text(
+                "Fees",
+                style: AppStyle,
+              ),
             ],
           ),
           centerTitle: true,
           bottom: TabBar(
+            labelStyle: TextStyle(
+              fontSize: ScreenUtil().setSp(20),
+            ),
+            isScrollable: true,
             tabs: [
               Tab(
                 text: "Installment",

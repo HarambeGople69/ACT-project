@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:myapp/widgets/custom_download_row.dart';
 import 'package:myapp/widgets/custom_expansion_tile.dart';
+import 'package:myapp/widgets/custom_pdf_display.dart';
 
 class Syllabus extends StatefulWidget {
   const Syllabus({Key? key}) : super(key: key);
@@ -29,19 +30,12 @@ class _SyllabusState extends State<Syllabus> {
                   children: [
                     CustomDownloadRow(
                       seePDF: () {
-                        print("Hera");
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) {
+                          return PdfView(path: "images/english.pdf");
+                        }));
                       },
-                      title:
-                          "Class-I English reviesed syllabus for 2nd and 3rd Term",
-                      function: () {
-                        print("Download");
-                      },
-                    ),
-                    CustomDownloadRow(
-                      seePDF: () {
-                        print("Hera");
-                      },
-                      title: "Class-I English DIVIDED SYLLABUS 2020-2021,",
+                      title: "Class: LKG English",
                       function: () {
                         print("Download");
                       },
@@ -56,19 +50,12 @@ class _SyllabusState extends State<Syllabus> {
                   children: [
                     CustomDownloadRow(
                       seePDF: () {
-                        print("Hera");
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) {
+                          return PdfView(path: "images/math.pdf");
+                        }));
                       },
-                      title:
-                          "Class-I Math reviesed syllabus for 2nd and 3rd Term",
-                      function: () {
-                        print("Download");
-                      },
-                    ),
-                    CustomDownloadRow(
-                      seePDF: () {
-                        print("Hera");
-                      },
-                      title: "Class-I MATHEMATICS DIVIDED SYLLABUS 2020-2021,",
+                      title: "Class: LKG Math",
                       function: () {
                         print("Download");
                       },
@@ -83,19 +70,12 @@ class _SyllabusState extends State<Syllabus> {
                   children: [
                     CustomDownloadRow(
                       seePDF: () {
-                        print("Hera");
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) {
+                          return PdfView(path: "images/science.pdf");
+                        }));
                       },
-                      title:
-                          "Class-I Science reviesed syllabus for 2nd and 3rd Term",
-                      function: () {
-                        print("Download");
-                      },
-                    ),
-                    CustomDownloadRow(
-                      seePDF: () {
-                        print("Hera");
-                      },
-                      title: "Class-I Science DIVIDED SYLLABUS 2020-2021,",
+                      title: "Class: LKG Science",
                       function: () {
                         print("Download");
                       },
@@ -104,25 +84,18 @@ class _SyllabusState extends State<Syllabus> {
                 ),
               ),
               CustomExpansiontile(
-                title: "Drawing",
+                title: "Nepali",
                 widget: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     CustomDownloadRow(
                       seePDF: () {
-                        print("Hera");
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) {
+                          return PdfView(path: "images/nepali.pdf");
+                        }));
                       },
-                      title:
-                          "Class-I Drawing reviesed syllabus for 2nd and 3rd Term",
-                      function: () {
-                        print("Download");
-                      },
-                    ),
-                    CustomDownloadRow(
-                      seePDF: () {
-                        print("Hera");
-                      },
-                      title: "Class-I Drawing DIVIDED SYLLABUS 2020-2021,",
+                      title: "Class: LKG Drawing",
                       function: () {
                         print("Download");
                       },

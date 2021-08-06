@@ -27,55 +27,44 @@ class _CircularTabState extends State<CircularTab> {
             ),
             TextField(
               decoration: InputDecoration(
-                  suffixIcon: Icon(
-                    Icons.search,
-                    size: ScreenUtil().setSp(
-                      20,
-                    ),
+                suffixIcon: Icon(
+                  Icons.search,
+                  size: ScreenUtil().setSp(
+                    20,
                   ),
-                  labelText: "Search",
-                  labelStyle: TextStyle(
-                    fontSize: ScreenUtil().setSp(20),
-                  ),
-                  ),
+                ),
+                labelText: "Search",
+                labelStyle: TextStyle(
+                  fontSize: ScreenUtil().setSp(20),
+                ),
+              ),
             ),
             Expanded(
                 child: ListView(
               children: [
                 CustomAttachment(
-                  title: "Creative Writing circular",
+                  title: "English",
                   circularFor: "Circular For: 16-Mar-2021",
                   circularAdded: "Circular Added on: 16-Mar-2021",
+                  path: "images/english.pdf",
                 ),
                 CustomAttachment(
-                  title: "Kids online dance class -ISEK",
+                  title: "Math",
                   circularFor: "Circular For: 14-Mar-2021",
                   circularAdded: "Circular Added on: 14-Mar-2021",
+                  path: "images/math.pdf",
                 ),
                 CustomAttachment(
-                  title: "Bollywood Dance Class for women",
+                  title: "Nepali",
                   circularFor: "Circular For: 14-Mar-2021",
                   circularAdded: "Circular Added on: 14-Mar-2021",
+                  path: "images/nepali.pdf",
                 ),
                 CustomAttachment(
-                  title: "Kids online dance class -ISEK",
+                  title: "Science",
                   circularFor: "Circular For: 14-Mar-2021",
                   circularAdded: "Circular Added on: 14-Mar-2021",
-                ),
-                CustomAttachment(
-                  title: "Bollywood Dance Class for women",
-                  circularFor: "Circular For: 14-Mar-2021",
-                  circularAdded: "Circular Added on: 14-Mar-2021",
-                ),
-                CustomAttachment(
-                  title: "Arshad-in India Book of Records",
-                  circularFor: "Circular For: 10-Mar-2021",
-                  circularAdded: "Circular Added on: 10-Mar-2021",
-                ),
-                CustomAttachment(
-                  title: "INTERNATIONAL WOMENS DAY interaction session today",
-                  circularFor: "Circular For: 08-Mar-2021",
-                  circularAdded: "Circular Added on: 08-Mar-2021",
+                  path: "images/science.pdf",
                 ),
               ],
             ))

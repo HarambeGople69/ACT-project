@@ -70,39 +70,28 @@ class _ClassNotesState extends State<ClassNotes> {
                 child: ListView(
               children: [
                 CustomClass(
-                  title: "Workbook worksheet 7 Answer key",
+                  title: "First term English ",
                   subject: "Eng",
                   date: "24-Feb-2021,",
+                  path: "images/english.pdf",
                 ),
                 CustomClass(
-                  title: "Workbook worksheet 6 Answer key",
-                  subject: "Eng",
+                  title: "First term Math ",
+                  subject: "Math",
                   date: "24-Feb-2021,",
+                  path: "images/math.pdf",
                 ),
                 CustomClass(
-                  title: "Unit 6 - The Selfish Tree",
-                  subject: "Eng",
+                  title: "First term Nepali ",
+                  subject: "Nep",
                   date: "24-Feb-2021,",
+                  path: "images/nepali.pdf",
                 ),
                 CustomClass(
-                  title: "TERM 3- COMMON NOTES",
-                  subject: "Eng",
+                  title: "First term Science ",
+                  subject: "Sci",
                   date: "24-Feb-2021,",
-                ),
-                CustomClass(
-                  title: "Workbook worksheet 7 Answer key",
-                  subject: "Eng",
-                  date: "24-Feb-2021,",
-                ),
-                CustomClass(
-                  title: "Workbook worksheet 7 Answer key",
-                  subject: "Eng",
-                  date: "24-Feb-2021,",
-                ),
-                CustomClass(
-                  title: "Workbook worksheet 7 Answer key",
-                  subject: "Eng",
-                  date: "24-Feb-2021,",
+                  path: "images/science.pdf",
                 ),
               ],
             ))

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:myapp/utils/styles.dart';
 import 'package:myapp/widgets/our_sized_height.dart';
 
 class Installment extends StatefulWidget {
@@ -15,8 +16,8 @@ class _InstallmentState extends State<Installment> {
     return Scaffold(
       body: Container(
         margin: EdgeInsets.symmetric(
-          horizontal: ScreenUtil().setSp(50),
-          vertical: ScreenUtil().setSp(50),
+          horizontal: ScreenUtil().setSp(15),
+          vertical: ScreenUtil().setSp(10),
         ),
         child: Column(
           children: [
@@ -25,6 +26,7 @@ class _InstallmentState extends State<Installment> {
                 Spacer(),
                 Text(
                   "2020-21",
+                  style: feeStyle,
                 ),
                 Spacer(),
                 Icon(Icons.arrow_downward)
@@ -40,11 +42,24 @@ class _InstallmentState extends State<Installment> {
                 children: [
                   Text(
                     "Total fee",
+                    style: TextStyle(
+                      fontSize: ScreenUtil().setSp(
+                        25,
+                      ),
+                      fontWeight: FontWeight.w300,
+                      color: Colors.blue[200],
+                    ),
                   ),
                   Text(
                     "KD 0.000",
+                    style: feeStyle,
                   ),
                   ElevatedButton(
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(
+                        Colors.blue[600],
+                      ),
+                    ),
                     onPressed: () {},
                     child: Text(
                       "Pay now",

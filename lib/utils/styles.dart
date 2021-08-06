@@ -22,3 +22,9 @@ final BlueinfoStyle = TextStyle(
   fontSize: ScreenUtil().setSp(15),
   fontWeight: FontWeight.w400,
 );
+
+final feeStyle = TextStyle(
+  color: Colors.blue[600],
+  fontSize: ScreenUtil().setSp(35),
+  fontWeight: FontWeight.w600,
+);
