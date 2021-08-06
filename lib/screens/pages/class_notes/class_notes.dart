@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:myapp/models/class_note_models.dart';
 import 'package:myapp/utils/styles.dart';
 import 'package:myapp/widgets/custom_class_notes_tile.dart';
 
@@ -11,12 +12,40 @@ class ClassNotes extends StatefulWidget {
 }
 
 class _ClassNotesState extends State<ClassNotes> {
+  List<ClassNoteModel> notesList = [
+    ClassNoteModel(
+      title: "First term English",
+      subject: "Eng",
+      date: "24-Feb-2021,",
+      path: "images/english.pdf",
+    ),
+    ClassNoteModel(
+      title: "First term Math",
+      subject: "Math",
+      date: "24-Feb-2021,",
+      path: "images/math.pdf",
+    ),
+    ClassNoteModel(
+      title: "First term Nepali ",
+      subject: "Nep",
+      date: "24-Feb-2021,",
+      path: "images/nepali.pdf",
+    ),
+    ClassNoteModel(
+      title: "First term Science ",
+      subject: "Sci",
+      date: "24-Feb-2021,",
+      path: "images/science.pdf",
+    ),
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(
-          120,
+          ScreenUtil().setSp(
+            100,
+          ),
         ),
         child: AppBar(
           title: Text(
@@ -66,34 +95,22 @@ class _ClassNotesState extends State<ClassNotes> {
                 ),
               ),
             ),
+            // CustomClass(
+            //         title: "First term English ",
+            //         subject: "Eng",
+            //         date: "24-Feb-2021,",
+            //         path: "images/english.pdf",
+            //       ),
             Expanded(
-                child: ListView(
-              children: [
-                CustomClass(
-                  title: "First term English ",
-                  subject: "Eng",
-                  date: "24-Feb-2021,",
-                  path: "images/english.pdf",
-                ),
-                CustomClass(
-                  title: "First term Math ",
-                  subject: "Math",
-                  date: "24-Feb-2021,",
-                  path: "images/math.pdf",
-                ),
-                CustomClass(
-                  title: "First term Nepali ",
-                  subject: "Nep",
-                  date: "24-Feb-2021,",
-                  path: "images/nepali.pdf",
-                ),
-                CustomClass(
-                  title: "First term Science ",
-                  subject: "Sci",
-                  date: "24-Feb-2021,",
-                  path: "images/science.pdf",
-                ),
-              ],
+                child: ListView.builder(
+              itemCount: notesList.length,
+              itemBuilder: (context, index) {
+                return CustomClass(
+                    title: notesList[index].title,
+                    subject: notesList[index].subject,
+                    date: notesList[index].date,
+                    path: notesList[index].path);
+              },
             ))
           ],
         ),

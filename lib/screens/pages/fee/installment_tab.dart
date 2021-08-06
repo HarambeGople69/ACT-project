@@ -51,7 +51,7 @@ class _InstallmentState extends State<Installment> {
                     ),
                   ),
                   Text(
-                    "KD 0.000",
+                    "NRS 0.000",
                     style: feeStyle,
                   ),
                   ElevatedButton(

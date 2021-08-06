@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:myapp/screens/pages/assignment/assignment.dart';
 import 'package:myapp/screens/pages/circular/circular.dart';
 import 'package:myapp/screens/pages/class_notes/class_notes.dart';
 import 'package:myapp/screens/pages/fee/fee.dart';
@@ -296,79 +297,86 @@ class _HomePageState extends State<HomePage> {
             SizedBox(
               height: ScreenUtil().setSp(10),
             ),
-            Container(
-              margin: EdgeInsets.symmetric(
-                  horizontal: ScreenUtil().setSp(10),
-                  vertical: ScreenUtil().setSp(10)),
-              // padding: EdgeInsets.symmetric(
-              //   horizontal: ScreenUtil().setSp(5),
-              //   vertical: ScreenUtil().setSp(5),
-              // ),
-              // width: double.infinity,
-              height: ScreenUtil().setSp(
-                110,
-              ),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.all(
-                  Radius.circular(ScreenUtil().setSp(30)),
+            InkWell(
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return Assignment();
+                }));
+              },
+              child: Container(
+                margin: EdgeInsets.symmetric(
+                    horizontal: ScreenUtil().setSp(10),
+                    vertical: ScreenUtil().setSp(10)),
+                // padding: EdgeInsets.symmetric(
+                //   horizontal: ScreenUtil().setSp(5),
+                //   vertical: ScreenUtil().setSp(5),
+                // ),
+                // width: double.infinity,
+                height: ScreenUtil().setSp(
+                  110,
                 ),
-              ),
-              child: Row(
-                children: [
-                  Expanded(
-                    child: ClipPath(
-                      clipper: ArcClipper(),
-                      child: Container(
-                        padding: EdgeInsets.symmetric(
-                          horizontal: ScreenUtil().setSp(20),
-                          vertical: ScreenUtil().setSp(20),
-                        ),
-                        // width: double.infinity / 2,
-                        decoration: BoxDecoration(
-                            color: Color(0xffb356c8),
-                            borderRadius: BorderRadius.all(
-                              Radius.circular(ScreenUtil().setSp(30)),
-                            )),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              "Assignmnet",
-                              style: BoldinfoStyle,
-                            ),
-                            Text(
-                              "View and submit your homework",
-                              style: infoStyle,
-                            ),
-                            Row(
-                              children: [
-                                Text(
-                                  "View all",
-                                  style: infoStyle,
-                                ),
-                                Icon(
-                                  Icons.arrow_forward_ios,
-                                  color: Colors.white,
-                                  size: ScreenUtil().setSp(25),
-                                ),
-                              ],
-                            ),
-                          ],
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(ScreenUtil().setSp(30)),
+                  ),
+                ),
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: ClipPath(
+                        clipper: ArcClipper(),
+                        child: Container(
+                          padding: EdgeInsets.symmetric(
+                            horizontal: ScreenUtil().setSp(20),
+                            vertical: ScreenUtil().setSp(20),
+                          ),
+                          // width: double.infinity / 2,
+                          decoration: BoxDecoration(
+                              color: Color(0xffb356c8),
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(ScreenUtil().setSp(30)),
+                              )),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                "Assignmnet",
+                                style: BoldinfoStyle,
+                              ),
+                              Text(
+                                "View and submit your homework",
+                                style: infoStyle,
+                              ),
+                              Row(
+                                children: [
+                                  Text(
+                                    "View all",
+                                    style: infoStyle,
+                                  ),
+                                  Icon(
+                                    Icons.arrow_forward_ios,
+                                    color: Colors.white,
+                                    size: ScreenUtil().setSp(25),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                     ),
-                  ),
-                  Image.asset(
-                    "images/2.png",
-                    fit: BoxFit.cover,
-                    width: ScreenUtil().setSp(
-                      80,
+                    Image.asset(
+                      "images/2.png",
+                      fit: BoxFit.cover,
+                      width: ScreenUtil().setSp(
+                        80,
+                      ),
                     ),
-                  ),
-                  // Text("data"),
-                ],
+                    // Text("data"),
+                  ],
+                ),
               ),
             ),
             Container(

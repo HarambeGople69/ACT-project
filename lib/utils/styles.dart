@@ -28,3 +28,10 @@ final feeStyle = TextStyle(
   fontSize: ScreenUtil().setSp(35),
   fontWeight: FontWeight.w600,
 );
+
+final assignmentStyle = TextStyle(
+  color: Colors.black54,
+  fontSize: ScreenUtil().setSp(
+    15,
+  ),
+);

@@ -3,7 +3,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:myapp/screens/auth/login_page.dart';
-import 'package:myapp/screens/pages/home_pages.dart';
+import 'package:myapp/screens/pages/dashboard.dart';
 
 // void main() => runApp(
 //       DevicePreview(

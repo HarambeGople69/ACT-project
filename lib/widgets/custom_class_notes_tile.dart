@@ -36,8 +36,18 @@ class _CustomClassState extends State<CustomClass> {
               mainAxisSize: MainAxisSize.min,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text("Subject: ${widget.subject}"),
-                Text("Shared On: ${widget.date}"),
+                Text(
+                  "Subject: ${widget.subject}",
+                  style: TextStyle(
+                    fontSize: ScreenUtil().setSp(15),
+                  ),
+                ),
+                Text(
+                  "Shared On: ${widget.date}",
+                  style: TextStyle(
+                    fontSize: ScreenUtil().setSp(15),
+                  ),
+                ),
               ],
             ),
             actions: [

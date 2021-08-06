@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:myapp/models/circular_tab_model.dart';
 import 'package:myapp/utils/styles.dart';
 import 'package:myapp/widgets/custom_circular_attachment.dart';
 
@@ -11,6 +12,32 @@ class CircularTab extends StatefulWidget {
 }
 
 class _CircularTabState extends State<CircularTab> {
+  List<CircularTabModel> circularList = [
+    CircularTabModel(
+      title: "English",
+      circularFor: "Circular For: 16-Mar-2021",
+      circularAdded: "Circular Added on: 16-Mar-2021",
+      path: "images/english.pdf",
+    ),
+    CircularTabModel(
+      title: "Math",
+      circularFor: "Circular For: 14-Mar-2021",
+      circularAdded: "Circular Added on: 14-Mar-2021",
+      path: "images/math.pdf",
+    ),
+    CircularTabModel(
+      title: "Nepali",
+      circularFor: "Circular For: 14-Mar-2021",
+      circularAdded: "Circular Added on: 14-Mar-2021",
+      path: "images/nepali.pdf",
+    ),
+    CircularTabModel(
+      title: "Science",
+      circularFor: "Circular For: 14-Mar-2021",
+      circularAdded: "Circular Added on: 14-Mar-2021",
+      path: "images/science.pdf",
+    ),
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,34 +67,17 @@ class _CircularTabState extends State<CircularTab> {
               ),
             ),
             Expanded(
-                child: ListView(
-              children: [
-                CustomAttachment(
-                  title: "English",
-                  circularFor: "Circular For: 16-Mar-2021",
-                  circularAdded: "Circular Added on: 16-Mar-2021",
-                  path: "images/english.pdf",
-                ),
-                CustomAttachment(
-                  title: "Math",
-                  circularFor: "Circular For: 14-Mar-2021",
-                  circularAdded: "Circular Added on: 14-Mar-2021",
-                  path: "images/math.pdf",
-                ),
-                CustomAttachment(
-                  title: "Nepali",
-                  circularFor: "Circular For: 14-Mar-2021",
-                  circularAdded: "Circular Added on: 14-Mar-2021",
-                  path: "images/nepali.pdf",
-                ),
-                CustomAttachment(
-                  title: "Science",
-                  circularFor: "Circular For: 14-Mar-2021",
-                  circularAdded: "Circular Added on: 14-Mar-2021",
-                  path: "images/science.pdf",
-                ),
-              ],
-            ))
+              child: ListView.builder(
+                  itemCount: circularList.length,
+                  itemBuilder: (context, index) {
+                    return CustomAttachment(
+                      title: circularList[index].title,
+                      circularFor: circularList[index].circularFor,
+                      circularAdded: circularList[index].circularAdded,
+                      path: circularList[index].path,
+                    );
+                  }),
+            ),
           ],
         ),
       ),
