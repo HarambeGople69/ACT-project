@@ -1,19 +1,24 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:myapp/utils/styles.dart';
 import 'package:myapp/widgets/custom_pdf_display.dart';
+import 'package:myapp/widgets/custom_pdf_file.dart';
 
 class CustomAttachment extends StatefulWidget {
+  final String basename;
   final String title;
   final String circularFor;
   final String circularAdded;
-  final String path;
+  final File file;
   const CustomAttachment({
     Key? key,
     required this.title,
     required this.circularFor,
     required this.circularAdded,
-    required this.path,
+    required this.file,
+    required this.basename,
   }) : super(key: key);
 
   @override
@@ -21,9 +26,6 @@ class CustomAttachment extends StatefulWidget {
 }
 
 class _CustomAttachmentState extends State<CustomAttachment> {
-  
- 
-
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -49,7 +51,10 @@ class _CustomAttachmentState extends State<CustomAttachment> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(widget.title, style: BlueinfoStyle),
+                Text(
+                  widget.title,
+                  style: BlueinfoStyle,
+                ),
                 SizedBox(
                   height: 20,
                 ),
@@ -67,7 +72,8 @@ class _CustomAttachmentState extends State<CustomAttachment> {
               IconButton(
                 onPressed: () {
                   Navigator.push(context, MaterialPageRoute(builder: (context) {
-                    return PdfView(path: widget.path);
+                    return PdfViewFile(
+                        file: widget.file, title: widget.basename);
                   }));
                 },
                 icon: Icon(

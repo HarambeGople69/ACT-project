@@ -29,7 +29,12 @@ class _InstallmentState extends State<Installment> {
                   style: feeStyle,
                 ),
                 Spacer(),
-                Icon(Icons.arrow_downward)
+                Icon(
+                  Icons.arrow_drop_down_sharp,
+                  size: ScreenUtil().setSp(
+                    50,
+                  ),
+                ),
               ],
             ),
             OurSizedHeight(),
