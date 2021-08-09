@@ -4,6 +4,7 @@ import 'package:myapp/screens/pages/assignment/assignment.dart';
 import 'package:myapp/screens/pages/circular/circular.dart';
 import 'package:myapp/screens/pages/class_notes/class_notes.dart';
 import 'package:myapp/screens/pages/fee/fee.dart';
+import 'package:myapp/screens/pages/gallery/gallery.dart';
 import 'package:myapp/screens/pages/student_corner/student_corner.dart';
 import 'package:myapp/utils/custom_clipper.dart';
 import 'package:myapp/utils/styles.dart';
@@ -185,7 +186,12 @@ class _HomePageState extends State<HomePage> {
                             children: [
                               FeatureButton(
                                 color: Color(0xff3091c8),
-                                function: () {},
+                                function: () {
+                                  Navigator.push(context,
+                                      MaterialPageRoute(builder: (context) {
+                                    return Gallery();
+                                  }));
+                                },
                                 linearGradient: LinearGradient(
                                   colors: [
                                     Color(0xff41b2fe),
