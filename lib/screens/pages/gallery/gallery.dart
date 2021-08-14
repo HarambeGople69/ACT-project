@@ -17,7 +17,6 @@ class _GalleryState extends State<Gallery> {
     "images/g2.jpg",
     "images/g1.jpg",
     "images/g4.jpg",
-    // "images/g2.jpg",
     "images/g5.jpg",
     "images/g2.jpg",
     "images/g6.jpg",

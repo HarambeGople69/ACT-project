@@ -4,10 +4,12 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 class CustomDrawerTile extends StatefulWidget {
   final String title;
   final String image;
+  final Function function;
   const CustomDrawerTile({
     Key? key,
     required this.title,
     required this.image,
+    required this.function,
   }) : super(key: key);
 
   @override
@@ -20,6 +22,9 @@ class _CustomDrawerTileState extends State<CustomDrawerTile> {
     return Column(
       children: [
         ListTile(
+          onTap: () {
+            widget.function();
+          },
           leading: CircleAvatar(
             radius: ScreenUtil().setSp(
               20,

@@ -35,3 +35,23 @@ final assignmentStyle = TextStyle(
     15,
   ),
 );
+
+final EvaluationStyle = TextStyle(
+  fontSize: ScreenUtil().setSp(
+    20,
+  ),
+  fontWeight: FontWeight.w300,
+  color: Colors.blueGrey,
+);
+final PublishedStyle = TextStyle(
+  color: Color(0xff4fe452),
+  fontSize: ScreenUtil().setSp(
+    15,
+  ),
+);
+final DeniedStyle = TextStyle(
+  color: Colors.red,
+  fontSize: ScreenUtil().setSp(
+    15,
+  ),
+);

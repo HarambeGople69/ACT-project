@@ -46,7 +46,8 @@ class _CustomTextFieldState extends State<CustomTextField> {
             fontSize: ScreenUtil().setSp(
               15,
             ),
-          )),
+          )
+          ),
     );
   }
 }

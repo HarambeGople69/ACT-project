@@ -21,7 +21,7 @@ class PasswordForm extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextFormField(
         validator: (String? value) => validator(value!),
-        style: TextStyle(fontSize: ScreenUtil().setSp(50)),
+        style: TextStyle(fontSize: ScreenUtil().setSp(20)),
         controller: controller,
         obscureText: see!,
         decoration: InputDecoration(
@@ -35,17 +35,11 @@ class PasswordForm extends StatelessWidget {
               child: !see!
                   ? Icon(
                       Icons.visibility_off,
-                      color: Color(
-                        0xfffea23b,
-                      ),
-                      size: ScreenUtil().setSp(80),
+                      size: ScreenUtil().setSp(20),
                     )
                   : (Icon(
                       Icons.visibility,
-                      color: Color(
-                        0xfffea23b,
-                      ),
-                      size: ScreenUtil().setSp(80),
+                      size: ScreenUtil().setSp(20),
                     ))),
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(80),
@@ -54,7 +48,7 @@ class PasswordForm extends StatelessWidget {
           // labelStyle: paratext,
           errorStyle: TextStyle(
             fontSize: ScreenUtil().setSp(
-              40,
+              20,
             ),
           ),
         ));

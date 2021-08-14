@@ -9,6 +9,8 @@ import 'package:file_picker/file_picker.dart';
 import 'package:myapp/widgets/custom_pdf_file.dart';
 import 'package:myapp/widgets/custom_text_field.dart';
 import 'package:myapp/widgets/our_sized_height.dart';
+import 'package:nepali_date_picker/nepali_date_picker.dart' as picker;
+import 'package:nepali_date_picker/nepali_date_picker.dart';
 
 class CircularTab extends StatefulWidget {
   const CircularTab({Key? key}) : super(key: key);
@@ -139,27 +141,37 @@ class _CircularTabState extends State<CircularTab> {
                           type: TextInputType.name,
                         ),
                         OurSizedHeight(),
-                        TextField(
+                        TextFormField(
+                          validator: (value) {
+                            if (value!.isNotEmpty) {
+                              return null;
+                            } else {
+                              return "Please pick date";
+                            }
+                          },
                           decoration: InputDecoration(
-                              border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(30),
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(30),
+                            ),
+                            labelText: "Circular for:",
+                            // labelStyle: paratext,
+                            errorStyle: TextStyle(
+                              fontSize: ScreenUtil().setSp(
+                                15,
                               ),
-                              labelText: "Circular for:",
-                              // labelStyle: paratext,
-                              errorStyle: TextStyle(
-                                fontSize: ScreenUtil().setSp(
-                                  15,
-                                ),
-                              )),
+                            ),
+                          ),
                           controller: circulatFor,
                           readOnly: true,
                           onTap: () async {
-                            DateTime selectTime = DateTime.now();
-                            DateTime? pickedDate = await showDatePicker(
+                            DateTime selectTime = picker.NepaliDateTime.now();
+                            DateTime? pickedDate =
+                                await picker.showMaterialDatePicker(
                               context: context,
-                              initialDate: selectTime,
-                              firstDate: DateTime(2021),
-                              lastDate: DateTime(2022),
+                              initialDate: NepaliDateTime.now(),
+                              firstDate: NepaliDateTime(2078),
+                              lastDate: NepaliDateTime(2090),
+                              initialDatePickerMode: DatePickerMode.day,
                             );
                             if (pickedDate != null) {
                               selectTime = pickedDate;
@@ -209,7 +221,7 @@ class _CircularTabState extends State<CircularTab> {
                         circularFor: "Circular for: $circularAtText",
                         circularAdded:
                             "Circular added on ${DateFormat('yyyy-MM-dd').format(
-                          DateTime.now(),
+                          NepaliDateTime.now(),
                         )}",
                         file: file!,
                         basename: basename!));

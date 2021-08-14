@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:myapp/screens/pages/academic_performance/academic_performance.dart';
+import 'package:myapp/screens/pages/alearning/alearning.dart';
 import 'package:myapp/screens/pages/assignment/assignment.dart';
 import 'package:myapp/screens/pages/circular/circular.dart';
 import 'package:myapp/screens/pages/class_notes/class_notes.dart';
@@ -102,6 +104,11 @@ class _HomePageState extends State<HomePage> {
                                 ],
                               ),
                               Spacer(),
+                              Image.asset(
+                                "images/logo.png",
+                                height: ScreenUtil().setSp(50),
+                                width: ScreenUtil().setSp(50),
+                              ),
                             ],
                           ),
                         ],
@@ -227,7 +234,12 @@ class _HomePageState extends State<HomePage> {
                             children: [
                               FeatureButton(
                                 color: Color(0xffc3830d),
-                                function: () {},
+                                function: () {
+                                  Navigator.push(context,
+                                      MaterialPageRoute(builder: (context) {
+                                    return AcademicPerformance();
+                                  }));
+                                },
                                 linearGradient: LinearGradient(
                                   colors: [
                                     Color(0xfff79e0d),
@@ -279,7 +291,12 @@ class _HomePageState extends State<HomePage> {
                               ),
                               FeatureButton(
                                 color: Color(0xff3091c8),
-                                function: () {},
+                                function: () {
+                                  Navigator.push(context,
+                                      MaterialPageRoute(builder: (context) {
+                                    return alearning();
+                                  }));
+                                },
                                 linearGradient: LinearGradient(
                                   colors: [
                                     Color(0xff41b2fe),
