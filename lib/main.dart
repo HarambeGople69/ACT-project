@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
         // builder: DevicePreview.appBuilder,
         // theme: ThemeData(primarySwatch: Colors.amber),
         debugShowCheckedModeBanner: false,
-        home: HomePage(),
+        home: DashBoard(),
       ),
     );
   }

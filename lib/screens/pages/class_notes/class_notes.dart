@@ -17,25 +17,25 @@ class _ClassNotesState extends State<ClassNotes> {
       title: "First term English",
       subject: "Eng",
       date: "24-Feb-2021,",
-      path: "images/english.pdf",
+      path: "assets/pdf/english.pdf",
     ),
     ClassNoteModel(
       title: "First term Math",
       subject: "Math",
       date: "24-Feb-2021,",
-      path: "images/math.pdf",
+      path: "assets/pdf/math.pdf",
     ),
     ClassNoteModel(
       title: "First term Nepali ",
       subject: "Nep",
       date: "24-Feb-2021,",
-      path: "images/nepali.pdf",
+      path: "assets/pdf/nepali.pdf",
     ),
     ClassNoteModel(
       title: "First term Science ",
       subject: "Sci",
       date: "24-Feb-2021,",
-      path: "images/science.pdf",
+      path: "assets/pdf/science.pdf",
     ),
   ];
   @override

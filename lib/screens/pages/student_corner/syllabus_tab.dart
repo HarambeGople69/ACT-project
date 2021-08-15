@@ -32,7 +32,7 @@ class _SyllabusState extends State<Syllabus> {
                       seePDF: () {
                         Navigator.push(context,
                             MaterialPageRoute(builder: (context) {
-                          return PdfView(path: "images/english.pdf");
+                          return PdfView(path: "assets/pdf/english.pdf");
                         }));
                       },
                       title: "Class: LKG English",
@@ -52,7 +52,7 @@ class _SyllabusState extends State<Syllabus> {
                       seePDF: () {
                         Navigator.push(context,
                             MaterialPageRoute(builder: (context) {
-                          return PdfView(path: "images/math.pdf");
+                          return PdfView(path: "assets/pdf/math.pdf");
                         }));
                       },
                       title: "Class: LKG Math",
@@ -72,7 +72,7 @@ class _SyllabusState extends State<Syllabus> {
                       seePDF: () {
                         Navigator.push(context,
                             MaterialPageRoute(builder: (context) {
-                          return PdfView(path: "images/science.pdf");
+                          return PdfView(path: "assets/pdf/science.pdf");
                         }));
                       },
                       title: "Class: LKG Science",
@@ -92,7 +92,7 @@ class _SyllabusState extends State<Syllabus> {
                       seePDF: () {
                         Navigator.push(context,
                             MaterialPageRoute(builder: (context) {
-                          return PdfView(path: "images/nepali.pdf");
+                          return PdfView(path: "assets/pdf/nepali.pdf");
                         }));
                       },
                       title: "Class: LKG Drawing",

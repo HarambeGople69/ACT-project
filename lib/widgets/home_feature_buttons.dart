@@ -40,7 +40,7 @@ class FeatureButton extends StatelessWidget {
                 radius: ScreenUtil().setSp(20),
                 backgroundColor: color,
                 backgroundImage: AssetImage(
-                  "images/1.png",
+                  "assets/images/1.png",
                 ),
               ),
               Expanded(

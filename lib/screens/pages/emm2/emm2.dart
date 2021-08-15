@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:myapp/utils/styles.dart';
+import 'package:myapp/widgets/our_sized_height.dart';
 
-class EMM extends StatefulWidget {
-  const EMM({Key? key}) : super(key: key);
+class EMM2 extends StatefulWidget {
+  const EMM2({Key? key}) : super(key: key);
 
   @override
-  _EMMState createState() => _EMMState();
+  _EMM2State createState() => _EMM2State();
 }
 
-class _EMMState extends State<EMM> {
+class _EMM2State extends State<EMM2> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,7 +21,10 @@ class _EMMState extends State<EMM> {
         ),
       ),
       body: Container(
-        // margin:EdgeInsi
+        margin: EdgeInsets.symmetric(
+          horizontal: ScreenUtil().setSp(20),
+          vertical: ScreenUtil().setSp(10),
+        ),
         child: Column(
           children: [
             TextField(
@@ -37,6 +41,7 @@ class _EMMState extends State<EMM> {
                 ),
               ),
             ),
+            OurSizedHeight(),
             Text(
               "Please pull down from top of the screen and release to get the latest update",
               style: BlueinfoStyle,

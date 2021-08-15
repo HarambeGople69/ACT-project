@@ -20,6 +20,7 @@ class _CustomDrawerTileState extends State<CustomDrawerTile> {
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisSize: MainAxisSize.min,
       children: [
         ListTile(
           onTap: () {
@@ -42,7 +43,7 @@ class _CustomDrawerTileState extends State<CustomDrawerTile> {
             ),
           ),
         ),
-        Divider(),
+        // Divider(),
       ],
     );
   }

@@ -15,14 +15,14 @@ import 'package:myapp/widgets/home_feature_buttons.dart';
 import 'package:myapp/widgets/our_sized_height.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+class DashBoard extends StatefulWidget {
+  const DashBoard({Key? key}) : super(key: key);
 
   @override
-  _HomePageState createState() => _HomePageState();
+  _DashBoardState createState() => _DashBoardState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _DashBoardState extends State<DashBoard> {
   _launchUrl() async {
     final url = 'https://actnepal1.lyvenote.app';
     if (await canLaunch(url)) {
@@ -92,7 +92,7 @@ class _HomePageState extends State<HomePage> {
                                   CircleAvatar(
                                     radius: ScreenUtil().setSp(30),
                                     backgroundImage: AssetImage(
-                                      "images/face.jpg",
+                                      "assets/images/face.jpg",
                                     ),
                                   ),
                                   OurSizedHeight(),
@@ -105,7 +105,7 @@ class _HomePageState extends State<HomePage> {
                               ),
                               Spacer(),
                               Image.asset(
-                                "images/logo.png",
+                                "assets/images/logo.png",
                                 height: ScreenUtil().setSp(50),
                                 width: ScreenUtil().setSp(50),
                               ),
@@ -391,7 +391,7 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                     Image.asset(
-                      "images/2.png",
+                      "assets/images/2.png",
                       fit: BoxFit.cover,
                       width: ScreenUtil().setSp(
                         80,

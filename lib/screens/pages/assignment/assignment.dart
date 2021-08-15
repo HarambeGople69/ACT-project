@@ -19,7 +19,7 @@ class _AssignmentState extends State<Assignment> {
       status: "Pending",
       deadline: "28-feb-2021",
       deadlineTime: "11:59 PM",
-      path: "images/english.pdf",
+      path: "assets/pdf/english.pdf",
     ),
     AssignmentModel(
       title: "Science",
@@ -27,7 +27,7 @@ class _AssignmentState extends State<Assignment> {
       status: "Approved",
       deadline: "28-Jan-2021",
       deadlineTime: "11:59 PM",
-      path: "images/science.pdf",
+      path: "assets/pdf/science.pdf",
     ),
     AssignmentModel(
       title: "Math",
@@ -35,7 +35,7 @@ class _AssignmentState extends State<Assignment> {
       status: "Pending",
       deadline: "28-May-2021",
       deadlineTime: "11:59 PM",
-      path: "images/math.pdf",
+      path: "assets/pdf/math.pdf",
     ),
     AssignmentModel(
       title: "Nepali",
@@ -43,7 +43,7 @@ class _AssignmentState extends State<Assignment> {
       status: "Denied",
       deadline: "28-Apr-2021",
       deadlineTime: "11:59 PM",
-      path: "images/nepali.pdf",
+      path: "assets/pdf/nepali.pdf",
     ),
   ];
   @override

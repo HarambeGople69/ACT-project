@@ -39,7 +39,7 @@ class _LoginPageState extends State<LoginPage> {
     return Scaffold(
         body: Container(
       margin: EdgeInsets.symmetric(
-        horizontal: ScreenUtil().setSp(40),
+        horizontal: ScreenUtil().setSp(20),
       ),
       child: Form(
         key: _formKey,
@@ -50,12 +50,12 @@ class _LoginPageState extends State<LoginPage> {
             children: [
               // Spacer(),
               SizedBox(
-                height: ScreenUtil().setSp(450),
+                height: ScreenUtil().setSp(200),
               ),
               Text(
                 "Login",
                 style: TextStyle(
-                  fontSize: ScreenUtil().setSp(120),
+                  fontSize: ScreenUtil().setSp(40),
                   fontWeight: FontWeight.w500,
                 ),
               ),
@@ -63,7 +63,7 @@ class _LoginPageState extends State<LoginPage> {
               Text(
                 "Please sign in to continue",
                 style: TextStyle(
-                  fontSize: ScreenUtil().setSp(70),
+                  fontSize: ScreenUtil().setSp(20),
                   fontWeight: FontWeight.w500,
                   color: Colors.grey,
                 ),
@@ -72,13 +72,13 @@ class _LoginPageState extends State<LoginPage> {
 
               CustomTextField(
                 type: TextInputType.emailAddress,
-                title: "Email",
+                title: "Student ID",
                 icon: Icons.email,
                 validator: (value) {
-                  if (value.isNotEmpty && value.contains("@")) {
+                  if (value.isNotEmpty) {
                     return null;
                   } else {
-                    return "Invalid email";
+                    return "Can't be empty";
                   }
                 },
                 controller: _email_Controller,
@@ -156,7 +156,7 @@ class _LoginPageState extends State<LoginPage> {
               ),
 
               SizedBox(
-                height: ScreenUtil().setSp(570),
+                height: ScreenUtil().setSp(150),
               ),
               Center(
                 child: RichText(
@@ -165,7 +165,7 @@ class _LoginPageState extends State<LoginPage> {
                       TextSpan(
                           text: "Don't have an account? ",
                           style: TextStyle(
-                            fontSize: ScreenUtil().setSp(50),
+                            fontSize: ScreenUtil().setSp(20),
                             color: Colors.black,
                             fontWeight: FontWeight.w600,
                           )
@@ -185,7 +185,7 @@ class _LoginPageState extends State<LoginPage> {
                             0xfffea23b,
                           ),
                           fontWeight: FontWeight.w600,
-                          fontSize: ScreenUtil().setSp(50),
+                          fontSize: ScreenUtil().setSp(20),
                         ),
                       )
                     ],
