@@ -12,19 +12,19 @@ class Gallery extends StatefulWidget {
 
 class _GalleryState extends State<Gallery> {
   List images = [
-    "images/g1.jpg",
-    "images/g3.jpg",
-    "images/g2.jpg",
-    "images/g1.jpg",
-    "images/g4.jpg",
-    "images/g5.jpg",
-    "images/g2.jpg",
-    "images/g6.jpg",
-    "images/g1.jpg",
-    "images/g2.jpg",
-    "images/g7.jpg",
-    "images/g1.jpg",
-    "images/g8.png",
+    "assets/images/g1.jpg",
+    "assets/images/g3.jpg",
+    "assets/images/g2.jpg",
+    "assets/images/g1.jpg",
+    "assets/images/g4.jpg",
+    "assets/images/g5.jpg",
+    "assets/images/g2.jpg",
+    "assets/images/g6.jpg",
+    "assets/images/g1.jpg",
+    "assets/images/g2.jpg",
+    "assets/images/g7.jpg",
+    "assets/images/g1.jpg",
+    "assets/images/g8.png",
   ];
   @override
   Widget build(BuildContext context) {

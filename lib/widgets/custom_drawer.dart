@@ -1,7 +1,10 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:myapp/screens/pages/academic_performance/academic_performance.dart';
+import 'package:myapp/screens/pages/achievement/achievement.dart';
+import 'package:myapp/screens/pages/attendance/attendance.dart';
 import 'package:myapp/screens/pages/book_fee_payment/book_fee_payment.dart';
 import 'package:myapp/screens/pages/change_password/change_password.dart';
 import 'package:myapp/screens/pages/circular/circular.dart';
@@ -14,6 +17,13 @@ import 'package:myapp/screens/pages/event_calender/event_calender.dart';
 import 'package:myapp/screens/pages/fee/fee.dart';
 import 'package:myapp/screens/pages/feedback/feedback.dart';
 import 'package:myapp/screens/pages/gallery/gallery.dart';
+import 'package:myapp/screens/pages/news/news.dart';
+import 'package:myapp/screens/pages/notifications/notification.dart';
+import 'package:myapp/screens/pages/online_exam/online_exam.dart';
+import 'package:myapp/screens/pages/principal_message/principal_message.dart';
+import 'package:myapp/screens/pages/ptm_feedback/ptm_feedback.dart';
+import 'package:myapp/screens/pages/quick_contacts/quick_contacts.dart';
+import 'package:myapp/screens/pages/reference_material/reference_material.dart';
 import 'package:myapp/screens/pages/robotics_registration_form/robotics_registration_form.dart';
 import 'package:myapp/screens/pages/student_corner/student_corner.dart';
 import 'package:myapp/screens/pages/student_profile/student_profile.dart';
@@ -104,7 +114,12 @@ class _CustomDrawerState extends State<CustomDrawer> {
                     image: "assets/images/face.jpg",
                   ),
                   CustomDrawerTile(
-                    function: () {},
+                    function: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
+                        return Achievement();
+                      }));
+                    },
                     title: "Achievement",
                     image: "assets/images/face.jpg",
                   ),
@@ -114,7 +129,12 @@ class _CustomDrawerState extends State<CustomDrawer> {
                     image: "assets/images/face.jpg",
                   ),
                   CustomDrawerTile(
-                    function: () {},
+                    function: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
+                        return Attendance();
+                      }));
+                    },
                     title: "Attendance",
                     image: "assets/images/face.jpg",
                   ),
@@ -230,51 +250,71 @@ class _CustomDrawerState extends State<CustomDrawer> {
                   ),
                   CustomDrawerTile(
                     function: () {
-                      // Navigator.push(context,
-                      //     MaterialPageRoute(builder: (context) {
-                      //   return FeedBack();
-                      // }));
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
+                        return News();
+                      }));
                     },
                     title: "News",
                     image: "assets/images/face.jpg",
                   ),
                   CustomDrawerTile(
                     function: () {
-                      // Navigator.push(context,
-                      //     MaterialPageRoute(builder: (context) {
-                      //   return FeedBack();
-                      // }));
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
+                        return Notifications();
+                      }));
                     },
                     title: "Notification",
                     image: "assets/images/face.jpg",
                   ),
                   CustomDrawerTile(
                     function: () {
-                      // Navigator.push(context,
-                      //     MaterialPageRoute(builder: (context) {
-                      //   return FeedBack();
-                      // }));
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
+                        return OnlineExam();
+                      }));
                     },
                     title: "Online exam",
                     image: "assets/images/face.jpg",
                   ),
                   CustomDrawerTile(
-                    function: () {},
+                    function: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
+                        return PrincipalMessage();
+                      }));
+                    },
                     title: "Principal's Message",
                     image: "assets/images/face.jpg",
                   ),
                   CustomDrawerTile(
-                    function: () {},
+                    function: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
+                        return PTMFeedback();
+                      }));
+                    },
                     title: "PTM Feedback",
                     image: "assets/images/face.jpg",
                   ),
                   CustomDrawerTile(
-                    function: () {},
+                    function: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
+                        return QuickContact();
+                      }));
+                    },
                     title: "Quick Contacts",
                     image: "assets/images/face.jpg",
                   ),
                   CustomDrawerTile(
-                    function: () {},
+                    function: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
+                        return ReferenceMaterial();
+                      }));
+                    },
                     title: "Reference Material",
                     image: "assets/images/face.jpg",
                   ),
